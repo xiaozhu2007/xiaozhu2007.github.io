@@ -1,6 +1,8 @@
 
 # 捡漏库在  https://github.com/xiaozhu2007/bugs/
 
+## [![Gitter](https://badges.gitter.im/xiaozhu2007-github-io/community.svg)](https://gitter.im/xiaozhu2007-github-io/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 ------------------
 
 1.我们提供的功能主体: 更新优惠商品(俗称开车） 附带功能：百度网盘超级会员账号分享
