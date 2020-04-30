@@ -32,7 +32,8 @@ GitHub Pages是使用驻留在GitHub存储库中的代码创建网站的一种�
 
 named_screenshot
 
-单击“ 重命名”后，您的网站将自动发布在：https : //your-username.github.io/。该HTML文件（称为）index.html呈现为主页，您将在下一步中对此文件进行更改。
+单击“ 重命名”后，您的网站将自动发布在：https : //your-username.github.io/
+。该HTML文件（称为）index.html呈现为主页，您将在下一步中对此文件进行更改。
 
 恭喜你！您刚刚启动了第一个GitHub Pages网站。现在可以与全世界分享
 
@@ -45,15 +46,17 @@ named_screenshot
 是否要编辑刚刚发布的网站？让我们通过在index.html文件中进行自我介绍来练习提交。不用担心第一次就把它弄对了，您以后可以随时使用它。
 
 让我们从这个模板开始：
-
+```
 <p>Hello World! I’m [username]. This is my website!</p>
+```
 要添加您的简介，请复制我们的模板，然后单击index.html文件右上角的“编辑铅笔”图标。
 
 编辑此文件
 
 删除此占位符行：
-
+```
 <p>Welcome to your first GitHub Pages website!</p>
+```
 然后，将模板粘贴到第15行，并填写空白。
 
 编辑-githuboctocat-index
