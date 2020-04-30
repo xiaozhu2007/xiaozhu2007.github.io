@@ -99,4 +99,27 @@ named_screenshot
 </body>
 </html>
 ```
+---------------
+
+```
+* {
+  margin:0px;
+  padding:0px;
+}
+
+#octocat {
+  display: block;
+  width:384px;
+  margin: 50px auto;
+}
+
+p {
+  display: block;
+  width: 400px;
+  margin: 50px auto;
+  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+}
+
+```
+------------
 
