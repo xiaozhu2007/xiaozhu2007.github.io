@@ -74,3 +74,29 @@ named_screenshot
 通过创建自己的个人Octocat表情符号来更改GitHub Pages网站上的占位符Octocat gif，或从此处的徽标库中选择其他Octocat gif。将该图像添加到index.html文件的第12行，代替<img src=链接。
 
 是否想向您的GitHub Pages网站添加更多代码和有趣的样式？请按照以下说明来构建成熟的静态网站。
+
+
+
+--------------------
+
+```
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>my-first-website</title>
+  <LINK href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+
+<!-- Change this code here by copy and pasting your template on line 15 -->
+<p>Welcome to your first GitHub Pages website!</p>
+
+</body>
+</html>
+```
+
