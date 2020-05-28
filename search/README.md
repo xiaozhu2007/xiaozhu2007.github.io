@@ -13,7 +13,7 @@ Q：调用方法？
 A：
 ```
 
-<iframe src="https://xiaozhu2007.github.io/search/" scrolling="auto" width="200" height="400"><p>Your browser does not support iframes.你的浏览器不支持iframes元素</p>
+<iframe src="https://xiaozhu2007.github.io/search/" scrolling="auto" width="200" height="400" sandbox="allow-forms"><p>Your browser does not support iframes.你的浏览器不支持iframes元素</p>
 </iframe>
 
 ```
