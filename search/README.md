@@ -6,11 +6,8 @@
 
 我很早以前发现许多搜索引擎大全有许多广告，（很不爽，不是吗？例如：https://www.12345good.com/sousuoyinqing.shtml ），因此，我就做了这个搜索引擎大全。
 
-## 常见问题
+## 如何调用？
 
-Q：调用方法？
-
-A：
 ```
 
 <iframe src="https://xiaozhu2007.github.io/search/" scrolling="auto" width="200" height="400" sandbox="allow-forms"><p>Your browser does not support iframes.你的浏览器不支持iframes元素</p>
@@ -18,8 +15,16 @@ A：
 
 ```
 
+
 为了节约大家的时间，先回答几个大家问的最关心的问题。
 
 1、这确实是我参与的一个项目，由我整体负责。
 
 2、是的，我很帅。
+
+
+再来说说团队
+
+ 我们利用周末、假期等空闲时间一起来兼职完成这件令人振奋的事情。目前我们的团队包括Web前端工程师（也就是我）、PHP工程师各一名。他们多是【不好的】搜索引擎大全的长期迫害者，并对创作新的搜索引擎大全充满激情。
+
+ 与此同时我们也期待更多志同道合的小伙们加入。
