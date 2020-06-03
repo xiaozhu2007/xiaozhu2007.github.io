@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>WPS</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 30px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
+table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(223, 226, 229); margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-lines { padding-left: 4px; }
+.code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-top: 1px solid rgb(238, 242, 242); }
+.md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-color: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size: 0.9em; }
+code { background-color: rgb(243, 244, 244); padding: 0px 2px; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding-top: 8px; padding-bottom: 6px; }
+.md-task-list-item > input { margin-left: -1.3em; }
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { overflow-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+.md-mathjax-midline { background: rgb(250, 250, 250); }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border-radius: 3px; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
+.md-tag { color: rgb(167, 167, 167); opacity: 1; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+#md-notification .btn { border: 0px; }
+.dropdown-menu .divider { border-color: rgb(229, 229, 229); }
+.ty-preferences .window-content { background-color: rgb(250, 250, 250); }
+.ty-preferences .nav-group-item.active { color: white; background: rgb(153, 153, 153); }
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><p><span>WPS Office是由金山软件股份有限公司自主研发的一款办公软件套装，可以实现办公软件最常用的文字、表格、演示，PDF阅读等多种功能。具有内存占用低、运行速度快、云功能多、强大插件平台支持、免费提供海量在线存储空间及文档模板的优点。</span></p><h2><a name="软件特点" class="md-header-anchor"></a><span>软件特点</span></h2><h3><a name="兼容免费" class="md-header-anchor"></a><span>兼容免费</span></h3><p><span>WPS Office个人版对个人用户永久免费，包含WPS文字、WPS表格、WPS演示三大功能模块，另外有PDF阅读功能。与Microsoft Office中的Word，Excel，PowerPoint一一对应，应用XML数据交换技术，无障碍兼容docx.xlsx.pptx，pdf等文件格式，你可以直接保存和打开 Microsoft Word、Excel和 PowerPoint 文件，也可以用 Microsoft Office轻松编辑WPS系列文档。</span></p><h2><a name="wps特色" class="md-header-anchor"></a><span>WPS特色</span></h2><h3><a name="云办公" class="md-header-anchor"></a><span>“云”办公</span></h3><p><span>一个账号，随时随地阅读、编辑和保存文档，还可将文档共享给工作伙伴。</span></p><h3><a name="wps云账号" class="md-header-anchor"></a><span>WPS云账号</span></h3><h3><a name="其他" class="md-header-anchor"></a><span>其他</span></h3><p><span>1、无隔阂兼容MS-Office加密信息、宏文档 内容互联、知识分享 ——以提升效率为核心的互联网应用 。</span></p><p><span>2、网聚智慧的多彩网络互动平台，单一用户随需随时分享天下人知识积累，悠然制作精美文档 。</span></p><p><span>3、便捷的自动在线升级功能，无需用户动手，实时分享最新技术成果 。</span></p><p><span>4、独创的KRM版权保护技术，文件授权范围随需指定 随需应动、无限扩展 ——以想到就能做到为追求的应用无限扩展</span>
+<span>设置 。</span></p><p><span>5、跨平台应用，不论是Windows还是Linux平台，应用无障碍。</span></p><p><span>7、按照MSAPI定义和实现的二次开发接口高达250个类，无限扩展用户个性化定制和应用开发的需求 。</span></p><p><span>8、无缝链接电子政务，文件随需分享到政府内网中 。</span>
+<span>、</span>
+<span>9、可扩展的插件机制，无限扩展大程序员想象和创造空间 。</span></p><p><span>10、支持126种语言应用， 包罗众多生僻小语种，保证文件跨国、跨地区自主交流 。</span></p><p><span>11、体察到pdf文件已经成为全球流行的文件格式，开发应用支持直接输出PDF文件技术 中文特色、安全易用 ——以体贴入微为目标的中文特色和人性化易用设计 。</span></p><p><span>12、文本框间文字绕排、稿纸格式、斜线表格、文字工具、中文项目符号、电子表格支持中文纸张规格等中文特色一一体现，足量尊重中文使用者习惯 。</span></p><p><span>13、电子表格里面智能收缩、表格操作的即时效果预览和智能提示、全新的度量单位控件、批注筐里面可以显示作者等</span>
+<span>人性化的易用设计，以用户为本 新添功能、快乐体验 ——数百种新添功能，用户舒适享受办公乐趣。</span></p><p><span>14、WPS文字提供带圈字符、合并字符、艺术字、立体效果功能，用户娱乐中处理文字 。</span></p><p><span>15、WPS表格支持手动顺序双面打印、手动逆序双面打印、拼页打印、反片打印应用，用户想怎么打，就怎么打 。</span></p><p><span>16、WPS演示添加34种动画方案选择、30种自定义动画效果，演示制作播放成为一种游戏。</span></p><h2><a name="发展历史" class="md-header-anchor"></a><span>发展历史</span></h2><p><strong><span>1988年5月，一位叫求伯君的普通技术人员在一个宾馆的出租房间里凭借一台386电脑写出了WPS（Word Processing System）1.0 ，从此开创了中文字处理时代。</span></strong></p><p><span>1988年到1995年的7年间，WPS迅速发展。</span></p><p><span>1993年，为了迎接Word的挑战，求伯君带领金山公司开发出了类似于Office套件的“盘古组件”，包括金山皓月、文字处理、双城电子表、金山英汉双向词典、名片管理、事务管理。但是，这个产品不仅没有赢得市场，而且丢掉了在Dos操作系统中的领先优势。</span></p><p><span>1994年，WPS用户超过千万，占领了中文文字处理市场的90%。同年，微软Windows系统在中国悄然登陆。金山与微软达成协议，通过设置双方都可以互相读取对方的文件，也就是这一纸协议，成为了WPS由盛到衰的转折点。</span>
+<span>1996年，随着windows操作系统的普及，通过各种渠道传播的word6.0和word97成功地将大部分WPS过渡为自己的用户，WPS的发展进入历史最低点。</span></p><p><span>1997年，WPS 97发布，这是第一个在windows平台上运行的中国本土文字处理软件。</span>
+<span>盘古的失利使金山进入了发展的低谷，一些员工开始陆续离开，WPS 97一度仅有4名程序员坚持开发。求伯君在没有任何资料可供参考的情况下，终于摸索出了WPS 97。WPS 97是一套运行在Windows3.X、Windows 95环境下的中文字处理软件，在保留原有文字编辑方式的同时，支持“所见即所得”的文字处理方式。</span></p><p><span>1998年8月，联想公司注资金山，WPS开始了新的腾飞。1999年3月22日，金山公司在北京新世纪饭店隆重发布WPS </span></p><p><span>2000，开始集成文字办公、电子表格、多媒体演示制作和图象处理等多种功能。从此，WPS走出了单一字处理软件的定位。</span></p><p><span>2001年，WPS 2000获国家科技进步二等奖(一等奖空缺)，同时金山还推出了《WPS 2000繁体版（香港版、台湾版）》一经推出就大受欢迎，WPS凭借这个版本迅速打开了香港、台湾和澳门等使用繁体字地区的市场。</span></p><p><span>2001年5月，WPS正式采取国际办公软件通用定名方式，更名为WPS Office。在产品功能上，WPS Office从单模块的文字处理软件升级为以文字处理、电子表格、演示制作、电子邮件和网页制作等一系列产品为核心的多模块组件式产品。在用户需求方面，WPS Office细分为多个版本，其中包括WPS Office专业版、WPS Office 教师版和WPS Office 学生版，力图在多个用户市场里全面出击。同时为了满足少数民族的办公需求，WPS Office蒙文版发布。</span></p><p><span>2001年12月28日，中国政府首次进行大规模正版软件采购。经过历时半年的甄选，WPS Office通过采用国家机关最新公文模板，支持国家最新合同标准和编码标准GB18030等实实在在的“中国特色”，得到了政府部门的青睐，WPS Office打响政府采购第一枪：北京市政府采购WPS Office 11143套。从此，WPS Office势如竹破，成为上至国务院57部委、下至全国31个省市机关的标准办公平台。</span></p><p><span>2002年，金山发出了“先继承、后创新、决胜互联之巅”的铮铮誓言。重整河山，WPS踏上二次创业的征途。百名研发精英彻底放弃14年技术积累，新建产品内核，重写数十万行代码，开始了长达三年的卧薪尝胆。春去秋来，千余个日夜鏖战，终于研发出了拥有完全自主知识产权的WPS Office 2005。</span></p><p><span>2006年3月份《电脑报》“2005年度－2006年度中国IT品牌调查”中，WPS Office 以20.22%的市场份额继续成为国内市场占有份额最高的国产办公软件产品。2006年，WPS Office 吹响进军海外的号角。9月，WPS日文版（Kingsoft Office 2007）在日本东京发布。</span></p><p><span>2007年5月，WPS Office英文版在越南发布，开始进入英文市场。凭借优秀的产品品质，WPS Office在2007年再次获得国家科技进步二等奖。</span></p><p><span>2008年7月，WPS又一举拿下国家电网的千万定单，为央企的正版化建设奠定了良好的基础。</span></p><p><span>在2013年5月17日发布了WPS2013版本，更快更稳定的V9引擎，启动速度提升25%；更方便更省心的全新交互设计，大大增强用户易用性；随意换肤的WPS，四套主题随心切换（不含25周年纪念版和扩展主题，扩展主题需另行下载，25周年纪念版已在2014年01月01日绝版）；协同工作更简单，PC、Android设备无缝对接。</span></p><p><span>2014年3月25日，WPS 6.0 for Android正式发布，个人版永久免费，体积小、速度快；独有手机阅读模式，字体清晰翻页流畅；完美支持微软Office、PDF等23种文档格式；文档漫游功能等等。</span></p><p><span>2014年5月30日金山WPS正式宣布新版Logo。</span></p><h2><a name="媒体热议" class="md-header-anchor"></a><span>媒体热议</span></h2><ul><li><span>安卓版五倍速扩张用户量两年破亿</span>
+<span>近日，金山WPSOffice官方消息透露，截至2013年9月1日，WPS Office安卓版全球用户量已经突破1亿，与2019同期相比，用户量增加了500%。</span></li><li><span>和腾讯、小米达成合作</span>
+<span>12月30日，金山软件宣布旗下非全资附属子公司北京金山办公软件与腾讯科技(深圳)有限公司于12月27日订立战略合作协议，同一时间，金山软件也与小米集团签定了合作协议，金山软件将向小米集团</span>
+<span>提供云服务，并通过其产品或网站为小米产品的销售提供推广服务。</span></li><li><span>成为KindleFire系列移动终端的唯一办公软件</span>
+<span>2014年9月，金山软件旗下金山办公WPS在官方微博表示，亚马逊选择WPS作为KindleFire系列移动终端的唯一办公软件。亚马逊称新款Kindle电子阅读器没有选择国际其他品牌办公软件，而选择了与金山WPS合作，成为大家最为关注的焦点之一。 [13] </span></li><li><span>开通在线商店</span>
+<span>2014年下半年，金山办公旗下WPS Office在线商城:wpsgo.com正式上线。自此，除批量永久授权之外的所有WPS商品均可实现在线购买，采购过程高效便捷，更好地满足了企业的个性化办公需求。</span>
+<span>部分国内企业正在用WPS替代Office。现在很多企业都决定使用WPS这类国产软件，已经不再经常使用国外的办公软件，现在政府采购可能会放弃苹果产品也是无可厚非的，一方面是从信息安全的角度考虑，一方面也是为了倡导大家使用国产产品、支持民族产业</span></li></ul></div>
+</body>
+</html>
