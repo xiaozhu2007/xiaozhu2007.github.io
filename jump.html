@@ -19,13 +19,13 @@ function GetQueryString(name)
      if(r!=null)return  unescape(r[2]); return null;
 }
 var mygo=GetQueryString("go");
-if(mygo !=null && myurl.toString().length>1)
+if(mygo !=null && mygo.toString().length>1)
 {
 window.location.href=GetQueryString("go");
 }
 else
 {
-window.location.href="http://xiaozhu2007.gitee.io";
+window.location.href="https://xiaozhu2007.gitee.io";
 }
 }
 </script>
