@@ -18,8 +18,8 @@ function GetQueryString(name)
      var r = window.location.search.substr(1).match(reg);
      if(r!=null)return  unescape(r[2]); return null;
 }
-var myurl=GetQueryString("go");
-if(myurl !=null && myurl.toString().length>1)
+var mygo=GetQueryString("go");
+if(mygo !=null && myurl.toString().length>1)
 {
 window.location.href=GetQueryString("go");
 }
