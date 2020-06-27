@@ -171,7 +171,35 @@ var _hmt = _hmt || [];
         <div id="dragText"></div><!-- 滑动容器文本 -->
         <div id="dragHandler" class="dragHandlerBg"></div>
         </div><!--    滑块     |       滑块初始背景       -->
-  
+<script>
+function setCookie(cname,cvalue,exdays){
+	var d = new Date();
+	d.setTime(d.getTime()+(exdays*24*60*60*1000));
+	var expires = "expires="+d.toGMTString();
+	document.cookie = cname+"="+cvalue+"; "+expires;
+}
+function getCookie(cname){
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) {
+		var c = ca[i].trim();
+		if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+	}
+	return "";
+}
+function checkCookie(){
+	var user=getCookie("username");
+	if (user!=""){
+		alert("欢迎 " + user + " 再次访问");
+	}
+	else {
+		user = prompt("请输入你的名字:","");
+  		if (user!="" && user!=null){
+    		setCookie("username",user,30);
+    	}
+	}
+}
+</script>
 
 <hr>
 <a href="https://jvav.top/" target="_blank" title="来自赞助商的 Jvav 课程广告">
@@ -179,7 +207,7 @@ var _hmt = _hmt || [];
   
 <h3 name="link"><a href="https://explorer1120.github.io/" target="_blank">Explore1120的个人主页</a></h3>
 </body>
-<footer>
+<footer onload="checkCookie()">
 
 <a href="http://xiaozhu2007.github.io/rss/">
 <img src="http://xiaozhu2007.github.io/rss.png">
