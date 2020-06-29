@@ -1,0 +1,39 @@
+function weiboLogin()
+{
+	let weiboAppId = '432432';
+	let weiboAuthPath = 'http://www.test.com/authweibo';
+	openWindow(`https://api.weibo.com/oauth2/authorize?client_id=${weiboAppId}&response_type=code&redirect_uri=${encodeURIComponent(weiboAuthPath)}`);
+}
+
+String params = "client_id=" + appId
+		+ "&client_secret=" + appSecret
+		+ "&grant_type=authorization_code"
+		+ "&redirect_uri=" + URLUtil.encode(authPath)
+		+ "&code=" + code;
+// 用code换取accessToken
+String result = HttpsUtil.post("https://api.weibo.com/oauth2/access_token", params);
+Map<String, Object> resp = JsonUtil.toObject(result, new TypeReference<Map<String, Object>>(){});
+
+Integer errorCode = (Integer)resp.get("error_code");
+String error = (String)resp.get("error");
+String errorMsg = (String)resp.get("error_description");
+if(errorCode != null && errorCode != 0) return new ErrorResult(errorCode, error + (errorMsg==null?"":errorMsg));
+String accessToken = (String)resp.get("access_token");
+String uid = (String)resp.get("uid"); // 这个uid就是微博用户的唯一用户ID，可以通过这个id直接访问到用户微博主页
+int expires = (Integer)resp.get("expires_in"); // 有效期，单位秒
+
+// 用uid和accessToken换取用户信息
+String result = HttpsUtil.get("https://api.weibo.com/2/users/show.json?access_token="+accessToken+"&uid="+uid);
+Map<String, Object> resp = JsonUtil.toObject(result, new TypeReference<Map<String, Object>>(){});
+
+errorCode = (Integer)resp.get("error_code");
+error = (String)resp.get("error");
+errorMsg = (String)resp.get("error_description");
+if(errorCode != null && errorCode != 0) return new ErrorResult(errorCode, error + (errorMsg==null?"":errorMsg));
+
+String nickname = (String)resp.get("screen_name");
+// 微博180*180高清头像
+String avatar = (String)resp.get("avatar_large");
+String gender = (String)resp.get("gender");
+gender = "m".equals(gender) ? "男" : ("f".equals(gender) ? "女" : "");
+
