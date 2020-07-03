@@ -15,7 +15,7 @@ function GetQueryString(name)
      if(r!=null)return  unescape(r[2]); return null;
 }
 var date=GetQueryString("date");
-if(date !=null && date.toString().length>1)
+if(date !=null && date.toString().length>0)
 {
 window.location.href= date + ".txt"
 }
@@ -23,7 +23,6 @@ else
 {
 window.location.href="null.txt"
 }
-
 //-->
 
 </script>
