@@ -17,7 +17,14 @@ function GetQueryString(name)
 var date=GetQueryString("date");
 if(date !=null && date.toString().length>0)
 {
+if(date !=null)
+{
 window.location.href= date + ".txt"
+}
+else
+{
+window.location.href="null.txt"
+}
 }
 else
 {
