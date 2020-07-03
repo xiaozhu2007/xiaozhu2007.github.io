@@ -19,7 +19,7 @@ if(s !=null && s.toString().length>0)
 {
 if(s !=null)
 {
-window.location.href="https://www.baidu.com/s?tn=news&word=" + s
+window.location.href="https://www.baidu.com/s?tn=news&word=" + java.net.URLDecoder.decode(s,"UTF-8"); 
 }
 else
 {
