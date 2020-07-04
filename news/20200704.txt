@@ -38,25 +38,26 @@
 链接：https://xkcd.com/2328/
 摘要：[图片]
 
-标题：
-链接：
-摘要：
+标题：央视调查：年收入12-20万人群感觉最幸福
+链接：https://news.mydrivers.com/1/698/698775.htm
+摘要：据了解，《《中国经济生活大调查》已经持续了14年，今年共向公众发放了13万张调查问卷，调查显示：年收入12-20万人群感觉最幸福。
 
-标题：
-链接：
-摘要：
+标题：患癌足球教练去世 患病期间坚持基层足球教育
+链接：http://news.yunnan.cn/system/2020/07/04/030766826.shtml
+摘要：荆永兴是一名注册在北京市足协的D级教练员。2013年，荆永兴确诊胃癌晚期，医生告诉他，最多还能活三年。年仅29岁的荆永兴决定把余生都奉献给热爱的足球，他成立了业余足球俱乐部，让更多喜爱足球的孩子通过足球获得快乐。
 
-标题：
-链接：
-摘要：
+标题：微软出品的“后悔药”！完全免费的删除文件数据恢复工具 Windows File Recovery
+链接：https://www.iplaysoft.com/windows-file-recovery.html
+摘要：误删除文件的经历估计大多数人都曾遇到过，不过幸亏这事还有“后悔药”可吃，因为我们可以借助一些「数据恢复软件」来找回一些被删除的文件。
+下载地址：https://www.microsoft.com/zh-cn/p/windows-file-recovery/9n26s50ln705
 
-标题：
-链接：
-摘要：
+标题：Minecraft’s Marketplace Currently Has Its Summer Sale Which Offers Some Fantastic Discounts On Dozens Of Items
+链接：https://happygamer.com/minecrafts-marketplace-currently-has-its-summer-sale-which-offers-some-fantastic-discounts-on-dozens-of-items-72303/
+摘要：Minecraft’s marketplace has a large amount of user-created content, and this is due to the more extensive player base that the Minecraft currently has obtained, with a monthly player base of 126 million and just recently topped 200 million sales! This has led to some fantastic creations to be added into the curated marketplace where users use the currency called Minecoin to purchase maps, skins, and other accessories.
 
-标题：
-链接：
-摘要：
+标题：腾讯内部人士爆料：与“老干妈”合作多个环节有漏洞 却无人察觉
+链接：https://news.mydrivers.com/1/698/698785.htm
+摘要：7月4日消息，腾讯内部人士对媒体爆料，腾讯与“老干妈”的合作过程中有多个环节存在漏洞，但是无人察觉。这位人士表示，与“老干妈”的合作项目完成之后，腾讯在2019年年底举行了一个颁奖活动，负责这次活动的团队想把“老干妈”请来现场参加，但是却一直联系不到对方。
 
 标题：
 链接：
