@@ -28,6 +28,56 @@ var _hmt = _hmt || [];
 <!-- 
 * 百度统计代码结束 
 -->
+  
+  
+ 
+<script>
+function siteTime() {
+window.setTimeout("siteTime()", 1000);
+var seconds = 1000;
+var minutes = seconds * 60;
+var hours = minutes * 60;
+var days = hours * 24;
+var years = days * 365;
+var today = new Date();
+/*********可以修改 开始**********/
+var startYear = "2020"; //开始日期：年
+var startMonth = "1";//开始日期：月
+var startDate = "1";//开始日期：日
+var startHour = "0";//开始日期：小时
+var startMinute = "0";//开始日期：分钟
+var startSecond = "0";//开始日期：秒
+/*********可以修改 结束**********/
+var todayYear = today.getFullYear();
+var todayMonth = today.getMonth() + 1;
+var todayDate = today.getDate();
+var todayHour = today.getHours();
+var todayMinute = today.getMinutes();
+var todaySecond = today.getSeconds();
+var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+var diff = t2 - t1;
+var diffYears = Math.floor(diff / years);
+var diffDays = Math.floor((diff / days) - diffYears * 365);
+var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+minutes);
+var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+diffMinutes * minutes) / seconds);
+if (startYear == todayYear) {
+document.getElementById("year").innerHTML = todayYear;
+/*********可以修改 开始**********/
+document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+" 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒 ";
+} else {
+document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+" 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒 ";
+}
+}
+/*********可以修改 结束**********/
+setInterval(siteTime, 1000);
+</script>
 </head>
 
 <body>
@@ -174,18 +224,38 @@ var _hmt = _hmt || [];
         <div id="dragHandler" class="dragHandlerBg"></div>
         </div><!--    滑块     |       滑块初始背景       -->
 
-<hr>
-<a href="https://jvav.top/" target="_blank" title="来自赞助商的 Jvav 课程广告">
-<img src="https://jvav.top/static/images/ad-by-toliet.png" alt="class" titl>
   
+ <!--  
+ <div>
+    <span id="ityped"></span>
+  </div>
+<script src="https://unpkg.com/ityped@1.0.2"></script>
+<script>
+    ityped.init(document.querySelector("#ityped"), {
+      showCursor: false,
+      strings: ['欢迎来到小猪网', 'Yeah!', 'QQ：2530665121']
+    })
+
+    ityped.init("#placeholder", {
+      placeholder: true,
+      showCursor: false
+    })
+  </script>
+-->
+<hr>
 <h3 name="link"><a href="https://explorer1120.github.io/" target="_blank">Explore1120的个人主页</a></h3>
 </body>
 <footer>
 <a href="join_in.html">加入我们</a>
-  
+ <br> 
 <a href="http://xiaozhu2007.github.io/rss/">
 <img src="http://xiaozhu2007.github.io/rss.png">
 </a>
+  
+<br> 
+<span id="sitetime">本站已安全运行 年 天 小时 分</span><br>
+<span>&copy;</span><span id="year"></span><span>  xiaozhu2007.github.io - 保留所有权利</span>
+<br> 
 </footer>
   
 </html>
