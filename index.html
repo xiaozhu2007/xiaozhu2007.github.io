@@ -32,6 +32,17 @@ var _hmt = _hmt || [];
   
  
 <script>
+  
+var referrer = document.referrer
+if(referrer !=null){
+  console.log("用户直接输入网址访问，已跳转");
+  window.location.href="home.html";
+   }
+  else{
+    console.log("用户来自 " + referrer);
+  }
+  
+/**********************************************/
 function siteTime() {
 window.setTimeout("siteTime()", 1000);
 var seconds = 1000;
