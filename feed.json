@@ -1,0 +1,83 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "HackPig520",
+  "home_page_url": "https://xiaozhu2007.gitlab.io/",
+  "feed_url": "https://xiaozhu2007.gitlab.io/feed.json",
+  "description": "Nothing to do.",
+  "items": [
+    {
+      "title": "记一次对 Minecraft 的崩溃分析",
+      "url": "https://xiaozhu2007.gitlab.io/post/Minecraft%E5%B4%A9%E6%BA%83%E6%8A%A5%E5%91%8A.html",
+      "id": "https://xiaozhu2007.gitlab.io/post/Minecraft%E5%B4%A9%E6%BA%83%E6%8A%A5%E5%91%8A.html",
+      "summary": "来了解下 Minecraft 的崩溃报告吧!\n",
+      "content_html": "<p>来了解下 Minecraft 的崩溃报告吧!</p>\n\n<h2 id=\"_0x00-前言\" tabindex=\"-1\"> 0x00 前言</h2>\n<p>!&gt; [WARNING] 本篇适用于Minecraft服务端/客户端报错。</p>\n<p>!&gt; [WARNING] 本篇适用于Minecraft服务端/客户端报错。</p>\n<p>!&gt; [WARNING] 本篇适用于Minecraft服务端/客户端报错。</p>\n<p>我所说的报错，指的是一款名为《Minecraft》的游戏中的报错。并不是《我的世界(中国版)》的报错</p>\n<p>在大家游玩Minecraft时，有时需要装一些Forge模组以此来提高可玩度，但自己配置模组包的时候，总会造成游戏崩溃，并且大多数人还连崩溃报告输出目录都不知道在哪，于是我想来改变这个现状</p>\n<h2 id=\"_0x01-一些俏皮话\" tabindex=\"-1\"> 0x01 一些俏皮话</h2>\n<blockquote>\n<p>Minecraft这个游戏，各种BUG和解决方案如果写成一堆不重复的书，摞起来的厚度可以比姚明还高。</p>\n</blockquote>\n<p>所以这个游戏不是一般的神奇，尤其是当你在看崩溃报告的时，你更会体验到这一点。</p>\n<p>你不加模组，MC也会崩溃，加了还是崩溃。这是一个比较罕见的情况。<br />\n大多数情况是你一股脑加了一堆模组，然后突然崩了，就不知道怎么办了。<br />\n幸运的是，这时候，你有0%的概率可以找到问题所在并解决这个问题。</p>\n<h2 id=\"_0x02-寻找崩溃日志\" tabindex=\"-1\"> 0x02 寻找崩溃日志</h2>\n<p>首先，你得知道你的客户端/服务端目录<br />\n客户端的CrashReport文件夹目录:<code>.minecraft\\crash-reports</code><br />\n如果你启用了版本隔离，那就在<code>.minecraft\\versions\\版本名\\crash-reports</code><br />\n服务端的CrashReport在你的服务端根目录下。<br />\n这个条件的前提是你的服务端是原版服务端</p>\n<h2 id=\"_0x03-打开崩溃日志\" tabindex=\"-1\"> 0x03 打开崩溃日志</h2>\n<p>嗯，我们都知道，crashreport目录下的所有文件都是以<code>crash-日期_具体时间-server.txt</code>命名的</p>\n<p>如果是客户端的崩溃报告日志,后面的server则是client</p>\n<p>然后我们找到一个日志打开并分析。</p>\n<h2 id=\"_0x04-下载文本编辑器\" tabindex=\"-1\"> 0x04 下载文本编辑器</h2>\n<p>首先你需要一个文本编辑器来查看崩溃报告，</p>\n<p>这里我推荐微软官方的Visaul Code.</p>\n<p>然后我们就可以愉快地打开报告进行查看了。</p>\n",
+      "date_published": "2021-11-25T00:00:00.000Z",
+      "date_modified": "2022-05-30T14:03:17.064Z",
+      "authors": [],
+      "tags": [
+        "学习"
+      ]
+    },
+    {
+      "title": "Termux安装Java并配置Minecraft服务器",
+      "url": "https://xiaozhu2007.gitlab.io/post/Termux%E9%85%8D%E7%BD%AEMinecraft%E6%9C%8D%E5%8A%A1%E5%99%A8.html",
+      "id": "https://xiaozhu2007.gitlab.io/post/Termux%E9%85%8D%E7%BD%AEMinecraft%E6%9C%8D%E5%8A%A1%E5%99%A8.html",
+      "content_html": "<h2 id=\"termux下载\" tabindex=\"-1\"> Termux下载</h2>\n<p>Termux官网：\nhttps://termux.com/</p>\n<p>官网推荐下载地址：\nhttps://f-droid.org/packages/com.termux/</p>\n<h2 id=\"下载java包\" tabindex=\"-1\"> 下载Java包</h2>\n<blockquote>\n<p>此处为了演示，使用Java8（理论支持Java11和16）</p>\n</blockquote>\n<h3 id=\"下载解压\" tabindex=\"-1\"> 下载解压</h3>\n<h4 id=\"下载jdk8-11\" tabindex=\"-1\"> 下载jdk8/11</h4>\n<p><a href=\"https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html\" target=\"_blank\" rel=\"noopener noreferrer\">JDK8下载地址<ExternalLinkIcon/></a>\n<a href=\"https://www.oracle.com/java/technologies/javase-jdk11-downloads.html\" target=\"_blank\" rel=\"noopener noreferrer\">JDK11下载地址<ExternalLinkIcon/></a></p>\n<p>我下载的是：jdk-8u291-linux-aarch64.tar.gz（Java11是jdk-11.0.10_linux-aarch64_bin.tar.gz）\n解压：</p>\n<div><pre><code><span>tar</span> -zxvf jdk-8u291-linux-aarch64.tar.gz\n</code></pre><div aria-hidden=\"true\"><span>1</span><br></div></div><p><em>or Java11</em></p>\n<div><pre><code><span>tar</span> -zxvf jdk-11.0.10_linux-aarch64_bin.tar.gz\n</code></pre><div aria-hidden=\"true\"><span>1</span><br></div></div><p>解压到一个好记的目录就可以了。\n我解压的目录是：/data/data/com.termux/files/home/java/jdk8/</p>\n<h4 id=\"修改环境变量\" tabindex=\"-1\"> 修改环境变量</h4>\n<p>配置<code>vim ~/.zshrc</code>，增加如下内容：</p>\n<div><pre><code>#JDK8\nexport JAVA_HOME=/data/data/com.termux/files/home/java/jdk8\nexport PATH=$PATH:$JAVA_HOME/bin:.\nexport CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.\n</code></pre><div aria-hidden=\"true\"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>这样jdk就配置完成了。</p>\n<div><pre><code>java --version #查看Java版本\n</code></pre><div aria-hidden=\"true\"><span>1</span><br></div></div><hr>\n<h3 id=\"下载服务端jar包\" tabindex=\"-1\"> 下载服务端Jar包</h3>\n<p>下载最新版服务器端jar包，minecraft服务端有多个版本，下面是部分服务端下载链接：</p>\n<p>官方服务端最新版本：https://minecraft.net/zh-hans/download/server/</p>\n<p>官方客户端、服务端所有版本(推荐)：https://mcversions.net/</p>\n<p>papermc服务端：https://papermc.io/downloads</p>\n<p>spigot服务端(需自行构建)：https://hub.spigotmc.org/jenkins/job/BuildTools/</p>\n<p>sponge服务端：https://www.spongepowered.org/</p>\n<p>回到终端，继续输入</p>\n<div><pre><code><span>cd</span> ~\n<span>mkdir</span> <span>mc</span> \n<span>cd</span> <span>mc</span> \n<span>wget</span> https://launcher.mojang.com/v1/objects/1b557e7b033b583cd9f66746b7a9ab1ec1673ced/server.jar <span>#1.16.5官方</span>\n<span>echo</span> <span>\"java -jar server.jar\"</span> <span>></span> start.sh\n<span>bash</span> start.sh\n</code></pre><div aria-hidden=\"true\"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>首次启动会失败，需要手动接受《最终用户许可协议》End-User License Agreement（EULA）</p>\n<div><pre><code><span># 一键修改命令</span>\n<span>sed</span> -i <span>'s/eula=false/eula=true/g'</span> eula.txt\n</code></pre><div aria-hidden=\"true\"><span>1</span><br><span>2</span><br></div></div><p>主配置文件是server.properties，其中大部分配置在这里进行修改</p>\n<p>比如：启用离线模式（盗版可进）</p>\n<div><pre><code><span>sed</span> -i <span>'s/online-mode=true/online-mode=false/g'</span> server.properties\n</code></pre><div aria-hidden=\"true\"><span>1</span><br></div></div>",
+      "date_published": "2021-08-27T00:00:00.000Z",
+      "date_modified": "2022-05-30T14:03:17.065Z",
+      "authors": [],
+      "tags": [
+        "软件"
+      ]
+    },
+    {
+      "title": "网页「深色模式」的实现指北",
+      "url": "https://xiaozhu2007.gitlab.io/post/%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F%E6%8C%87%E5%8C%97.html",
+      "id": "https://xiaozhu2007.gitlab.io/post/%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F%E6%8C%87%E5%8C%97.html",
+      "summary": "随着越来越多的操作系统、浏览器开始支持 Dark Mode 和相应的 Media Queries Level 5，越来越多的网站开始添加深色模式。\n",
+      "content_html": "<p>随着越来越多的操作系统、浏览器开始支持 Dark Mode 和相应的 Media Queries Level 5，越来越多的网站开始添加深色模式。</p>\n\n<h2 id=\"关于深色模式\" tabindex=\"-1\"> 关于深色模式</h2>\n<p>Dark themes reduce the luminance emitted by device screens, while still meeting minimum color contrast ratios. They help improve visual ergonomics by reducing eye strain, adjusting brightness to current lighting conditions, and facilitating screen use in dark environments – all while conserving battery power.</p>\n<blockquote>\n<p>翻译\n深色主题能降低设备屏幕发出的亮度，同时仍然满足最小的颜色对比度。它们有助于改善视觉效果、减少眼睛疲劳，调整亮度以适应当前的照明条件，并有助于在黑暗环境中使用屏幕，同时节省电池电量。</p>\n</blockquote>\n<h2 id=\"界面设计\" tabindex=\"-1\"> 界面设计</h2>\n<p>Google 在 Material Design 的设计指南中对于深色模式列出了一系列设计规范，其中第一条就是 「不要使用 100% 的纯黑」 。</p>\n<p>Google 推荐将深色表面和 100% 白色文字的对比度至少设置为为 15.8:1 （Dark surfaces and 100% white body text have a contrast level of at least 15.8:1）</p>\n<p>为什么呢？因为纯白色会反射所有波长的光线，而纯黑色会吸收所有光线，这是对比度最大的两种颜色，白底黑字时，文字过于刺眼，而黑底白字时，文字又可能难以辨认。如果长时间阅读这样的文字，势必会让眼睛感觉到疲劳，与深色模式开发的初衷背道而驰。</p>\n<p>Google 推荐使用 <code>#121212</code> 来作为深色模式的主背景色。</p>\n<p>A dark theme uses dark grey, rather than black, as the primary surface color for components. Dark grey surfaces can express a wider range of color, elevation, and depth, because it’s easier to see shadows on grey (instead of black).\nDark grey surfaces also reduce eye strain, as light text on a dark grey surface has less contrast than light text on a black surface.</p>\n<blockquote>\n<p>翻译\n深色主题应使用深灰而不是黑色作为组件的主要表面颜色。深灰色表面可以表示更广泛的颜色，高度和深度范围，因为更容易看到灰色阴影（而不是黑色）。\n深灰色的表面还可以减少眼睛疲劳，因为深灰色表面上的浅色文本的对比度低于黑色表面上的浅色文本。</p>\n</blockquote>\n",
+      "date_published": "2021-08-27T00:00:00.000Z",
+      "date_modified": "2022-05-30T14:03:17.065Z",
+      "authors": [],
+      "tags": [
+        "学习"
+      ]
+    },
+    {
+      "title": "用 GitLab CI 进行持续集成",
+      "url": "https://xiaozhu2007.gitlab.io/post/%E7%94%A8GitLabCI%E8%BF%9B%E8%A1%8C%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90.html",
+      "id": "https://xiaozhu2007.gitlab.io/post/%E7%94%A8GitLabCI%E8%BF%9B%E8%A1%8C%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90.html",
+      "summary": "本文对应用程序设计中常见的组件及其作用进行了介绍。\n",
+      "content_html": "<p>本文对应用程序设计中常见的组件及其作用进行了介绍。</p>\n\n<h1 id=\"用-gitlab-ci-进行持续集成\" tabindex=\"-1\"> 用 GitLab CI 进行持续集成</h1>\n<p><small>posted @ 2021/08/27</small></p>\n<h2 id=\"简介\" tabindex=\"-1\"> 简介</h2>\n<p>从 GitLab 8.0 开始，GitLab CI 就已经集成在 GitLab 中，我们只要在项目中添加一个 <code>.gitlab-ci.yml</code> 文件，然后添加一个 Runner，即可进行持续集成。 而且随着 GitLab 的升级，GitLab CI 变得越来越强大，本文将介绍如何使用 GitLab CI 进行持续集成。</p>\n<h2 id=\"一些概念\" tabindex=\"-1\"> 一些概念</h2>\n<p>在介绍 GitLab CI 之前，我们先看看一些持续集成相关的概念。</p>\n<h2 id=\"pipeline\" tabindex=\"-1\"> Pipeline</h2>\n<p>一次 Pipeline 其实相当于一次构建任务，里面可以包含多个流程，如安装依赖、运行测试、编译、部署测试服务器、部署生产服务器等流程。 任何提交或者 Merge Request 的合并都可以触发 Pipeline，如下图所示</p>\n<div><pre><code>+------------------+           +----------------+\n|                  |  trigger  |                |\n|   Commit / MR    +---------->+    Pipeline    |\n|                  |           |                |\n+------------------+           +----------------+\n</code></pre><div aria-hidden=\"true\"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>##Stages\nStages 表示构建阶段，说白了就是上面提到的流程。 我们可以在一次 Pipeline 中定义多个 Stages，这些 Stages 会有以下特点：</p>\n<p>所有 Stages 会按照顺序运行，即当一个 Stage 完成后，下一个 Stage 才会开始\n只有当所有 Stages 完成后，该构建任务 (Pipeline) 才会成功\n如果任何一个 Stage 失败，那么后面的 Stages 不会执行，该构建任务 (Pipeline) 失败\n因此，Stages 和 Pipeline 的关系就是：</p>\n<div><pre><code>+--------------------------------------------------------+\n|                                                        |\n|  Pipeline                                              |\n|                                                        |\n|  +-----------+     +------------+      +------------+  |\n|  |  Stage 1  |---->|   Stage 2  |----->|   Stage 3  |  |\n|  +-----------+     +------------+      +------------+  |\n|                                                        |\n+--------------------------------------------------------+\n</code></pre><div aria-hidden=\"true\"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><h2 id=\"jobs\" tabindex=\"-1\"> Jobs</h2>\n<p>Jobs 表示构建工作，表示某个 Stage 里面执行的工作。 我们可以在 Stages 里面定义多个 Jobs，这些 Jobs 会有以下特点：</p>\n<p>相同 Stage 中的 Jobs 会并行执行\n相同 Stage 中的 Jobs 都执行成功时，该 Stage 才会成功\n如果任何一个 Job 失败，那么该 Stage 失败，即该构建任务 (Pipeline) 失败\n所以，Jobs 和 Stage 的关系图就是：</p>\n<div><pre><code>+------------------------------------------+\n|                                          |\n|  Stage 1                                 |\n|                                          |\n|  +---------+  +---------+  +---------+   |\n|  |  Job 1  |  |  Job 2  |  |  Job 3  |   |\n|  +---------+  +---------+  +---------+   |\n|                                          |\n+------------------------------------------+\n</code></pre><div aria-hidden=\"true\"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><h2 id=\"简介-1\" tabindex=\"-1\"> 简介</h2>\n<p>配置好 Runner 之后，我们要做的事情就是在项目根目录中添加 .gitlab-ci.yml 文件了。 当我们添加了 .gitlab-ci.yml 文件后，每次提交代码或者合并 MR 都会自动运行构建任务了。</p>\n<p>还记得 Pipeline 是怎么触发的吗？Pipeline 也是通过提交代码或者合并 MR 来触发的！ 那么 Pipeline 和 .gitlab-ci.yml 有什么关系呢？ 其实 .gitlab-ci.yml 就是在定义 Pipeline 而已拉！</p>\n<h3 id=\"基本写法\" tabindex=\"-1\"> 基本写法</h3>\n<p>我们先来看看 .gitlab-ci.yml 是怎么写的：</p>\n<div><pre><code># 定义 stages\nstages:\n  - build\n  - test\n\n# 定义 job\njob1:\n  stage: test\n  script:\n    - echo &quot;I am job1&quot;\n    - echo &quot;I am in test stage&quot;\n\n# 定义 job\njob2:\n  stage: build\n  script:\n    - echo &quot;I am job2&quot;\n    - echo &quot;I am in build stage&quot;\n</code></pre><div aria-hidden=\"true\"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br></div></div><p>写起来很简单吧！用 stages 关键字来定义 Pipeline 中的各个构建阶段，然后用一些非关键字来定义 jobs。 每个 job 中可以可以再用 stage 关键字来指定该 job 对应哪个 stage。 job 里面的 script 关键字是最关键的地方了，也是每个 job 中必须要包含的，它表示每个 job 要执行的命令。</p>\n<p>回想一下我们之前提到的 Stages 和 Jobs 的关系，然后猜猜上面例子的运行结果？</p>\n<div><pre><code>I am job2\nI am in build stage\nI am job1\nI am in test stage\n</code></pre><div aria-hidden=\"true\"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>没错，根据我们在 stages 中的定义，build 阶段要在 test 阶段之前运行，所以 stage:build 的 jobs 会先运行，之后才会运行 stage:test 的 jobs。</p>\n<h4 id=\"常用的关键字\" tabindex=\"-1\"> 常用的关键字</h4>\n<p>下面介绍一些常用的关键字，想要更加详尽的内容请前往 <a href=\"\">官方文档</a></p>\n<p><strong>stages</strong></p>\n<p>定义 Stages，默认有三个 Stages，分别是 build, test, deploy。</p>\n<p><strong>types</strong></p>\n<p>stages 的别名。</p>\n<p><strong>before_script</strong></p>\n<p>定义任何 Jobs 运行前都会执行的命令。</p>\n<p>after_script**</p>\n<blockquote>\n<p>要求 GitLab 8.7+ 和 GitLab Runner 1.2+</p>\n</blockquote>\n<p>定义任何 Jobs 运行完后都会执行的命令。</p>\n<p><strong>variables &amp;&amp; Job.variables</strong></p>\n<blockquote>\n<p>要求 GitLab Runner 0.5.0+</p>\n</blockquote>\n<p>定义环境变量。 如果定义了 Job 级别的环境变量的话，该 Job 会优先使用 Job 级别的环境变量。</p>\n<p><strong>cache &amp;&amp; Job.cache</strong></p>\n<blockquote>\n<p>要求 GitLab Runner 0.7.0+</p>\n</blockquote>\n<p>定义需要缓存的文件。 每个 Job 开始的时候，Runner 都会删掉 .gitignore 里面的文件。 如果有些文件 (如 node_modules/) 需要多个 Jobs 共用的话，我们只能让每个 Job 都先执行一遍 npm install。 这样很不方便，因此我们需要对这些文件进行缓存。缓存了的文件除了可以跨 Jobs 使用外，还可以跨 Pipeline 使用。</p>\n<p>具体用法请查看 <a href=\"\">官方文档</a>。</p>\n<p><strong>Job.script</strong></p>\n<p>定义 Job 要运行的命令，必填项。</p>\n<p><strong>Job.stage</strong></p>\n<p>定义 Job 的 stage，默认为 test。</p>\n<p><strong>Job.artifacts</strong></p>\n<p>定义 Job 中生成的附件。 当该 Job 运行成功后，生成的文件可以作为附件 (如生成的二进制文件) 保留下来，打包发送到 GitLab，之后我们可以在 GitLab 的项目页面下下载该附件。 注意，不要把 artifacts 和 cache 混淆了。</p>\n",
+      "date_published": "2021-08-27T00:00:00.000Z",
+      "date_modified": "2022-05-30T14:03:17.065Z",
+      "authors": [],
+      "tags": [
+        "工具"
+      ]
+    },
+    {
+      "title": "Helloworld 世界，你好",
+      "url": "https://xiaozhu2007.gitlab.io/post/helloworld.html",
+      "id": "https://xiaozhu2007.gitlab.io/post/helloworld.html",
+      "content_html": "<h1 id=\"helloworld-世界-你好\" tabindex=\"-1\"> Helloworld 世界，你好</h1>\n<p><small>posted @ 2020/10/03</small></p>\n",
+      "date_published": "2020-10-03T00:00:00.000Z",
+      "date_modified": "2022-05-30T14:03:17.065Z",
+      "authors": [],
+      "tags": [
+        "网站"
+      ]
+    },
+    {
+      "title": "HackPig520 的随笔",
+      "url": "https://xiaozhu2007.gitlab.io/note/",
+      "id": "https://xiaozhu2007.gitlab.io/note/",
+      "content_html": "<p>这里是 HackPig520 的一些随笔，后续被整理进博客中。</p>\n",
+      "date_modified": "2022-05-30T14:03:17.065Z",
+      "authors": [],
+      "tags": [
+        "随笔"
+      ]
+    }
+  ]
+}

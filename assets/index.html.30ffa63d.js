@@ -1,0 +1,1 @@
+import{_ as e,o as c,b as r}from"./app.629fec38.js";const n={};function t(a,o){return c(),r("p",null,"\u8FD9\u91CC\u662F HackPig520 \u7684\u4E00\u4E9B\u968F\u7B14\uFF0C\u540E\u7EED\u88AB\u6574\u7406\u8FDB\u535A\u5BA2\u4E2D\u3002")}var s=e(n,[["render",t]]);export{s as default};
