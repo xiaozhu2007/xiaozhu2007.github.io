@@ -3,19 +3,6 @@ import { defineNavbarConfig } from "vuepress-theme-hope";
 export const NavbarConfig = defineNavbarConfig([
   "/",
   {
-    text: "文章",
-    icon: "note",
-    prefix: "/note/",
-    children: [
-      {
-        text: "随笔",
-        link: "",
-        icon: "note",
-        activeMatch: "^/note/$"
-      },
-    ],
-  },
-  {
     text: "博文",
     icon: "note",
     prefix: "/post/",
@@ -23,8 +10,20 @@ export const NavbarConfig = defineNavbarConfig([
       {
         text: "分类",
         link: "../category",
-        icon: "category",
+        icon: "people",
         activeMatch: "^/category/$"
+      },      
+      {
+        text: "随笔",
+        link: "../note",
+        icon: "note",
+        activeMatch: "^/note/$"
+      },
+      {
+        text: "Hexo迁移的文章",
+        link: "../post/hexo",
+        icon: "hexo",
+        activeMatch: "^/hexo/$"
       },
       {
         text: "标签",
