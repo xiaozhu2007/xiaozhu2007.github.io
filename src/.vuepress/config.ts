@@ -3,7 +3,7 @@ import { defineHopeConfig } from "vuepress-theme-hope";
 import themeConfig from "./themeConfig";
 
 export default defineHopeConfig({
-  dest: "dist",
+  dest: "./src/dist",
 
   head: [
     ["meta", { name: "site-verification", content: "4H7tt6db25szevS8" }],

@@ -1,7 +1,7 @@
 {
-  "name": "blog",
+  "name": "xiaozhu2007-blog",
   "version": "1.0.0",
-  "description": "个人博客",
+  "description": "The Blog of xiaozhu20007.",
   "scripts": {
     "serve:vite": "vuepress-vite dev src",
     "serve:webpack": "vuepress-webpack dev src",
@@ -17,7 +17,7 @@
     "debug-build:webpack": "cross-env DEBUG=vuepress* vuepress-webpack build src",
     "test": "echo \"Warning: no test specified\" && exit 0"
   },
-  "author": "HackPig520",
+  "author": "xizohu2007",
   "license": "MIT",
   "dependencies": {
     "@vuepress/plugin-docsearch": "2.0.0-beta.36",
