@@ -20,7 +20,7 @@
   "author": "xizohu2007",
   "license": "MIT",
   "dependencies": {
-    "@vuepress/plugin-docsearch": "2.0.0-beta.36",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.46",
     "@vuepress/plugin-search": "2.0.0-beta.36",
     "vuepress-theme-hope": "2.0.0-beta.13",
     "vuepress-vite": "2.0.0-beta.36",
