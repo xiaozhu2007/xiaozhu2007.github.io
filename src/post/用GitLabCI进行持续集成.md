@@ -11,10 +11,6 @@ isOriginal: false
 本文对应用程序设计中常见的组件及其作用进行了介绍。
 
 <!-- more -->
-# 用 GitLab CI 进行持续集成
-
-<small>posted @ 2021/08/27</small>
-
 ## 简介
 
 从 GitLab 8.0 开始，GitLab CI 就已经集成在 GitLab 中，我们只要在项目中添加一个 `.gitlab-ci.yml` 文件，然后添加一个 Runner，即可进行持续集成。 而且随着 GitLab 的升级，GitLab CI 变得越来越强大，本文将介绍如何使用 GitLab CI 进行持续集成。
@@ -32,7 +28,7 @@ isOriginal: false
 |                  |           |                |
 +------------------+           +----------------+
 ```
-##Stages
+## Stages
 Stages 表示构建阶段，说白了就是上面提到的流程。 我们可以在一次 Pipeline 中定义多个 Stages，这些 Stages 会有以下特点：
 
 所有 Stages 会按照顺序运行，即当一个 Stage 完成后，下一个 Stage 才会开始
