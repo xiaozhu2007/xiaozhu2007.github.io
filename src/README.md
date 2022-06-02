@@ -6,11 +6,11 @@ title: 主页
 heroImage: /logo.png
 heroText: HackPig520 的博客
 heroFullScreen: true
-tagline: 小意思
+tagline: 差若毫厘，缪以千里。
 projects:
-  - name: QBot
+  - name: NTBot
     desc: 一个用Mineflayer做的Minecraft机器人✨
-    link: https://gitee.com/xiaozhu2007/qbot
+    link: https://github.com/xiaozhu2007/NTBot
     icon: /assets/img/vuepress-hope-logo.svg
 
   - name: XBlog

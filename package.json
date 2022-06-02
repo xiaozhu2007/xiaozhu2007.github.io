@@ -20,16 +20,20 @@
   "author": "xizohu2007",
   "license": "MIT",
   "dependencies": {
-    "@vuepress/plugin-docsearch": "2.0.0-beta.36",
-    "@vuepress/plugin-search": "2.0.0-beta.36",
-    "vuepress-theme-hope": "2.0.0-beta.13",
-    "vuepress-vite": "2.0.0-beta.36",
-    "vuepress-webpack": "2.0.0-beta.36"
+    "vue": "^3.2.36",
+    "vue-server-renderer": "^2.6.14",
+    "@vuepress/plugin-docsearch": "^2.0.0-beta.46",
+    "@vuepress/plugin-search": "^2.0.0-beta.36",
+    "vuepress": "^1.9.7",
+    "vuepress-theme-hope": "^2.0.0-beta.76",
+    "vuepress-vite": "^2.0.0-beta.45",
+    "vuepress-webpack": "^2.0.0-beta.45"
   },
   "devDependencies": {
     "@textlint-rule/textlint-rule-no-unmatched-pair": "1.0.8",
-    "cross-env": "7.0.3",
-    "markdownlint-cli": "0.31.1",
+    "cross-env": "^7.0.3",
+    "lz-oss": "^1.0.0-alpha-1",
+    "markdownlint-cli": "^0.31.1",
     "prettier": "2.5.1",
     "remark-cli": "10.0.1",
     "remark-footnotes": "4.0.1",
@@ -46,7 +50,7 @@
     "textlint-rule-common-misspellings": "1.0.1",
     "textlint-rule-en-capitalization": "2.0.3",
     "textlint-rule-stop-words": "2.0.9",
-    "textlint-rule-terminology": "2.1.5",
+    "textlint-rule-terminology": "^3.0.1",
     "textlint-rule-zh-half-and-full-width-bracket": "1.1.0"
   },
   "remarkConfig": {

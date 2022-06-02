@@ -14,8 +14,6 @@ isOriginal: true
 本篇文章将以一个小白的身份教您如何用Termux安装Java并配置Minecraft服务器。
 <!-- more -->
 
-[[toc]]
-
 ## Termux下载
 Termux官网：
 https://termux.com/
