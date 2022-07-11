@@ -23,7 +23,7 @@
     "vue": "3.2.36",
     "vue-server-renderer": "2.6.14",
     "@vuepress/plugin-docsearch": "^2.0.0-beta.46",
-    "@vuepress/plugin-search": "^2.0.0-beta.36",
+    "@vuepress/plugin-search": "^2.0.0-beta.49",
     "vuepress": "^1.9.7",
     "vuepress-theme-hope": "^2.0.0-beta.76",
     "vuepress-vite": "^2.0.0-beta.45",
