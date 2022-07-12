@@ -25,7 +25,7 @@
     "@vuepress/plugin-docsearch": "^2.0.0-beta.46",
     "@vuepress/plugin-search": "^2.0.0-beta.36",
     "vuepress": "^1.9.7",
-    "vuepress-theme-hope": "^2.0.0-beta.76",
+    "vuepress-theme-hope": "^2.0.0-beta.86",
     "vuepress-vite": "^2.0.0-beta.45",
     "vuepress-webpack": "^2.0.0-beta.45"
   },
