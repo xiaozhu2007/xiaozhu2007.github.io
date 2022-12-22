@@ -5,14 +5,6 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>安全检查 | 滑块验证</title>
   <script>
-    var referrer = document.referrer;
-    if ((referrer = null)) {
-      console.log("用户直接输入网址访问，已跳转");
-      window.location.href = "home.html";
-    } else {
-      console.log("用户来自 " + referrer);
-    }
-
     function siteTime() {
       window.setTimeout("siteTime()", 1000);
       var seconds = 1000;
@@ -266,6 +258,7 @@
     <span>&copy;</span><span id="year"></span><span> xiaozhu2007.github.io - 保留所有权利</span>
     <br />
   </footer>
+  <script defer src="https://static.cyfan.ga/l.js" data-l="xiaozhu2007"></script>
 </body>
 
 </html>
